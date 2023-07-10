@@ -1,16 +1,14 @@
 import { makeStyles } from "tss-react/mui";
 
-const useStyles = makeStyles()(() => ({
+const useStyles = makeStyles()((theme) => ({
 	root: {
 		display: "flex",
 		height: "100%",
 	},
-	content: {
+	main: {
 		flexGrow: 1,
-		padding: "2rem",
-	},
-	toolbar: {
-		height: "70px",
+		marginTop: theme.spacing(8),
+		padding: theme.spacing(4),
 	},
 }));
 

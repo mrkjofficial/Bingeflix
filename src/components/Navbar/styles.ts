@@ -1,11 +1,19 @@
 import { makeStyles } from "tss-react/mui";
 
+const drawerWidth = "15rem";
+
 const useStyles = makeStyles()((theme) => ({
+	appBar: {
+		backgroundColor: "inherit",
+		boxShadow: "none",
+		color: "inherit",
+		position: "fixed",
+	},
 	toolBar: {
 		display: "flex",
 		height: "100%",
 		justifyContent: "space-between",
-		marginLeft: "240px",
+		marginLeft: drawerWidth,
 		[theme.breakpoints.down("sm")]: {
 			flexWrap: "wrap",
 			margin: "0",
@@ -24,10 +32,17 @@ const useStyles = makeStyles()((theme) => ({
 		marginLeft: theme.spacing(1),
 	},
 	linkButton: {
-		"&:hover": {
-			color: "white !important",
-			textDecoration: "none",
+		textDecoration: "none",
+	},
+	navBar: {
+		[theme.breakpoints.up("sm")]: {
+			flexShrink: 0,
+			width: drawerWidth,
 		},
+	},
+	drawer: {
+		border: "none",
+		width: drawerWidth,
 	},
 }));
 
